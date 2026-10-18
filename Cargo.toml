@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/shield_core",
+    "crates/shield_media",
+    "crates/shield_ui",
+    "crates/shield_launcher",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Damir Zaripov <eulafrsindychrthadcro@gmail.com>", "S.H.I.E.L.D Contributors"]
+license = "MIT"
+
+[workspace.dependencies]
+shield_core = { path = "crates/shield_core" }
+shield_media = { path = "crates/shield_media" }
+shield_ui = { path = "crates/shield_ui" }
+
+tokio = { version = "1.40", features = ["full"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.10", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dirs = "5.0"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+async-trait = "0.1"
+gpui = "0.2.2"
+
+[patch.crates-io]
+xattr = { path = "patches/xattr-0.2.3" }

@@ -1,0 +1,15 @@
+[package]
+name = "shield_launcher"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+shield_core = { workspace = true }
+shield_media = { workspace = true }
+shield_ui = { workspace = true }
+gpui = { workspace = true }
+dirs = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

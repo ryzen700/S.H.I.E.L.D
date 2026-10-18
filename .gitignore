@@ -3,6 +3,7 @@ node_modules/
 __pycache__
 dist
 out
+/target/
 .DS_Store
 *.log*
 *.tsbuildinfo
